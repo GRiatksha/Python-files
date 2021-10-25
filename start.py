@@ -1,0 +1,18 @@
+from student import student,course
+
+S1 = student("ABC", 20, 80)
+print(S1.ttt)
+# print(S1.id)
+S1.get_grade()
+# S2 = student("DEF", 30, 70)
+# S3 = student("GHI", 20, 60)
+# S4 = student("JKL", 20, 40)
+# # S1.get_grade()
+# # S2.get_grade()
+# c1 = course("ABC", 30, 80, "science", 5)
+# c1.add_students(S1)
+# c1.add_students(S2)
+# c1.add_students(S3)
+# c1.add_students(S4)
+# print(c1.getStudentNames())
+# print(c1.getStudentNamesByAge(20))
