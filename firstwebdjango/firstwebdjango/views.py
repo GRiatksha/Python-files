@@ -28,7 +28,7 @@ def encoder_func(person):
 
 
 def home(req):
-    connection = sqlite3.connect("gfg.db")
+    connection = sqlite3.connect("persons.db")
 
     # cursor object
     crsr = connection.cursor()
