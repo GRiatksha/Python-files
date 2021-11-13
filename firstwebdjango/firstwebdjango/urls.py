@@ -19,5 +19,6 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('employees/', views.GetAllEmployees, name='home'),
     path('', views.home, name='home'),
 ]
