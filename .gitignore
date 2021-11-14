@@ -3,3 +3,4 @@
 /firstwebdjango/.idea/
 /firstwebdjango/templates/__pycache__/
 /firstwebdjango/persons.db
+/firstwebdjango/firstwebdjango/LiskovSubsitutePrinciple/__pycache__/
