@@ -9,4 +9,5 @@ from firstwebdjango.InterfaceSegregation.IBasicCalculator import IBasicCalculato
 #         return a - b
 
 class BasicCalculator:
-    pass
+    def Sub(self, a, b):
+        return a - b

@@ -15,6 +15,7 @@ class BasicCalculatorTest(unittest.TestCase):
 
     def test_basic_calculator_sub_two_numbers(self):
         cal = BasicCalculator()
+        cal.Sub(1, 2)
 
 
 class MyTestCase(unittest.TestCase):
