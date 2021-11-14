@@ -16,7 +16,7 @@ class BasicCalculatorTest(unittest.TestCase):
     def test_basic_calculator_sub_two_numbers(self):
         cal = BasicCalculator()
         res = cal.Sub(1, 2)
-        self.assertEqual(1, res, "Sub is not working")
+        self.assertEqual(-1, res, "Sub is not working")
 
 
 class MyTestCase(unittest.TestCase):
