@@ -4,6 +4,16 @@ from parameterized import parameterized
 from firstwebdjango.InterfaceSegregation.BasicCalculator import BasicCalculator
 
 
+class BasicCalculatorTest(unittest.TestCase):
+    def test_CreateBasicCalculator(self):
+        cal = BasicCalculator()
+
+    def test_basic_calculator_add_two_numbers(self):
+        cal = BasicCalculator()
+        res = cal.Add(1, 2)
+        self.assertEqual(3, res)
+
+
 class MyTestCase(unittest.TestCase):
     def test_basic_calculator_add_positive_numbers(self):
         cal = BasicCalculator()
