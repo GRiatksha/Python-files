@@ -13,6 +13,9 @@ class BasicCalculatorTest(unittest.TestCase):
         res = cal.Add(1, 2)
         self.assertEqual(3, res)
 
+    def test_basic_calculator_sub_two_numbers(self):
+        cal = BasicCalculator()
+
 
 class MyTestCase(unittest.TestCase):
     def test_basic_calculator_add_positive_numbers(self):
