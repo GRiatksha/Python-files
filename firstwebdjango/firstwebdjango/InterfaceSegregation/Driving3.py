@@ -1,4 +1,3 @@
-from firstwebdjango.InterfaceSegregation.ICalculator import ICalculator
 from firstwebdjango.InterfaceSegregation.FullCalculator import FullCalculator
 
 

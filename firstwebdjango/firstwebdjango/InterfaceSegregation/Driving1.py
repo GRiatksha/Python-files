@@ -1,9 +1,7 @@
-from firstwebdjango.InterfaceSegregation.ICalculator import ICalculator
-from firstwebdjango.InterfaceSegregation.FullCalculator import RakshaCalculator
+from firstwebdjango.InterfaceSegregation.BasicCalculator import BasicCalculator
 
-# cal = ICalculator()
 
-cal = RakshaCalculator()
+cal = BasicCalculator()
 
 print(cal.Add(2, 3))
 
