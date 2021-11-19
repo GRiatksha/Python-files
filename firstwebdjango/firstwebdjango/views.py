@@ -7,7 +7,7 @@ import sqlite3
 
 
 def GetAllEmployees(req):
-    connection = sqlite3.connect("gfg.db")
+    connection = sqlite3.connect("persons.db")
 
     # cursor object
     crsr = connection.cursor()
@@ -46,3 +46,7 @@ def home(req):
     crsr.execute("Insert into Persons Values(1,'kumar','anil','add','mys')")
     connection.commit()
     return render(req, 'home.html')
+
+
+def login(req):
+    return render(req, 'login.html')
