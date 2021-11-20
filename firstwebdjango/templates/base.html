@@ -23,11 +23,17 @@
 
 <!-- custom style -->
 <link href="{% static 'css/ui.css' %}" rel="stylesheet" type="text/css"/>
+    {% block cssStylesBlock %}
+    {% endblock %}
 <link href="{% static 'css/responsive.css' %}" rel="stylesheet" media="only screen and (max-width: 1200px)" />
 
 <!-- custom javascript -->
 <script src="{% static 'js/script.js' %}" type="text/javascript"></script>
-
+<style>
+<!--    h1 {-->
+<!--    background-color:red-->
+<!--    }-->
+</style>
 <script type="text/javascript">
 /// some script
 
@@ -44,8 +50,16 @@ $(document).ready(function() {
 
 {% include 'includes/navbar.html' %}
 
-{% block content %}
+{% block maincontent %}
+
+{% endblock %}
+
+{% block jsContentBlock %}
 
 {% endblock %}
 
 {% include 'includes/footer.html' %}
+
+
+</body>
+</html>

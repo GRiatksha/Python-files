@@ -1,38 +1,22 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 {% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+
+{% block cssStylesBlock %}
+
     <style>
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
-* {
-	box-sizing: border-box;
-}
-
-body {
-	background: #f6f5f7;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	font-family: 'Montserrat', sans-serif;
-	height: 100vh;
-	margin: -20px 0 50px;
-}
-
-h1 {
+#loginContainerId h1 {
 	font-weight: bold;
 	margin: 0;
 }
 
-h2 {
+#loginContainerId h2 {
 	text-align: center;
 }
 
-p {
+#loginContainerId p {
 	font-size: 14px;
 	font-weight: 100;
 	line-height: 20px;
@@ -40,18 +24,18 @@ p {
 	margin: 20px 0 30px;
 }
 
-span {
+#loginContainerId span {
 	font-size: 12px;
 }
 
-a {
+#loginContainerId a {
 	color: #333;
 	font-size: 14px;
 	text-decoration: none;
 	margin: 15px 0;
 }
 
-button {
+#loginContainerId button {
 	border-radius: 20px;
 	border: 1px solid #FF4B2B;
 	background-color: #FF4B2B;
@@ -64,20 +48,20 @@ button {
 	transition: transform 80ms ease-in;
 }
 
-button:active {
+#loginContainerId button:active {
 	transform: scale(0.95);
 }
 
-button:focus {
+#loginContainerId button:focus {
 	outline: none;
 }
 
-button.ghost {
+#loginContainerId button.ghost {
 	background-color: transparent;
 	border-color: #FFFFFF;
 }
 
-form {
+#loginContainerId form {
 	background-color: #FFFFFF;
 	display: flex;
 	align-items: center;
@@ -88,7 +72,7 @@ form {
 	text-align: center;
 }
 
-input {
+#loginContainerId input {
 	background-color: #eee;
 	border: none;
 	padding: 12px 15px;
@@ -96,7 +80,7 @@ input {
 	width: 100%;
 }
 
-.container {
+#loginContainerId .container {
 	background-color: #fff;
 	border-radius: 10px;
   	box-shadow: 0 14px 28px rgba(0,0,0,0.25),
@@ -108,31 +92,31 @@ input {
 	min-height: 480px;
 }
 
-.form-container {
+#loginContainerId .form-container {
 	position: absolute;
 	top: 0;
 	height: 100%;
 	transition: all 0.6s ease-in-out;
 }
 
-.sign-in-container {
+#loginContainerId .sign-in-container {
 	left: 0;
 	width: 50%;
 	z-index: 2;
 }
 
-.container.right-panel-active .sign-in-container {
+#loginContainerId .container.right-panel-active .sign-in-container {
 	transform: translateX(100%);
 }
 
-.sign-up-container {
+#loginContainerId .sign-up-container {
 	left: 0;
 	width: 50%;
 	opacity: 0;
 	z-index: 1;
 }
 
-.container.right-panel-active .sign-up-container {
+#loginContainerId .container.right-panel-active .sign-up-container {
 	transform: translateX(100%);
 	opacity: 1;
 	z-index: 5;
@@ -151,7 +135,7 @@ input {
 	}
 }
 
-.overlay-container {
+#loginContainerId .overlay-container {
 	position: absolute;
 	top: 0;
 	left: 50%;
@@ -162,11 +146,11 @@ input {
 	z-index: 100;
 }
 
-.container.right-panel-active .overlay-container{
+#loginContainerId .container.right-panel-active .overlay-container{
 	transform: translateX(-100%);
 }
 
-.overlay {
+#loginContainerId .overlay {
 	background: #FF416C;
 	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
 	background: linear-gradient(to right, #FF4B2B, #FF416C);
@@ -182,11 +166,11 @@ input {
 	transition: transform 0.6s ease-in-out;
 }
 
-.container.right-panel-active .overlay {
+#loginContainerId .container.right-panel-active .overlay {
   	transform: translateX(50%);
 }
 
-.overlay-panel {
+#loginContainerId .overlay-panel {
 	position: absolute;
 	display: flex;
 	align-items: center;
@@ -201,28 +185,28 @@ input {
 	transition: transform 0.6s ease-in-out;
 }
 
-.overlay-left {
+#loginContainerId .overlay-left {
 	transform: translateX(-20%);
 }
 
-.container.right-panel-active .overlay-left {
+#loginContainerId .container.right-panel-active .overlay-left {
 	transform: translateX(0);
 }
 
-.overlay-right {
+#loginContainerId .overlay-right {
 	right: 0;
 	transform: translateX(0);
 }
 
-.container.right-panel-active .overlay-right {
+#loginContainerId .container.right-panel-active .overlay-right {
 	transform: translateX(20%);
 }
 
-.social-container {
+#loginContainerId .social-container {
 	margin: 20px 0;
 }
 
-.social-container a {
+#loginContainerId .social-container a {
 	border: 1px solid #DDDDDD;
 	border-radius: 50%;
 	display: inline-flex;
@@ -233,7 +217,7 @@ input {
 	width: 40px;
 }
 
-footer {
+#loginContainerId footer {
     background-color: #222;
     color: #fff;
     font-size: 14px;
@@ -245,23 +229,24 @@ footer {
     z-index: 999;
 }
 
-footer p {
+#loginContainerId footer p {
     margin: 10px 0;
 }
 
-footer i {
+#loginContainerId footer i {
     color: red;
 }
 
-footer a {
+#loginContainerId footer a {
     color: #3c97bf;
     text-decoration: none;
 }
     </style>
-</head>
 
-<body>
+ {% endblock %}
 
+{% block maincontent %}
+<div id="loginContainerId" >
 <h2>Weekly Coding Challenge #1: Sign in/up Form</h2>
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
@@ -310,13 +295,13 @@ footer a {
 		</div>
 	</div>
 </div>
+</div>
+{% endblock %}
 
-
-
-</body>
+{% block jsContentBlock %}
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 <script src="{% static 'js/login/login.js' %}"></script>
 
-</html>
+{% endblock %}
