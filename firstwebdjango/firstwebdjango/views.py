@@ -28,13 +28,13 @@ def encoder_func(person):
 
 
 def home(req):
+
+    return render(req, 'home.html')
+
+
+def addPerson():
     connection = sqlite3.connect("persons.db")
-
-    # cursor object
     crsr = connection.cursor()
-
-    # execute the command to fetch all the data from the table emp
-
 #     crsr.execute("""CREATE TABLE Persons (
 #     PersonID int,
 #     LastName varchar(255),
@@ -45,7 +45,6 @@ def home(req):
     crsr.execute("SELECT * FROM Persons")
     crsr.execute("Insert into Persons Values(1,'kumar','anil','add','mys')")
     connection.commit()
-    return render(req, 'home.html')
 
 
 def login(req):
